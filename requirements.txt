@@ -1,0 +1,5 @@
+# Core dependencies for utility functions
+requests>=2.31.0
+Pillow>=10.0.0
+PyPDF2>=3.0.0
+pdf2image>=1.16.3

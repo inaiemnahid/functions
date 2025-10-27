@@ -56,6 +56,18 @@ brew install poppler
 # Download from: https://github.com/oschwartz10612/poppler-windows/releases/
 ```
 
+## 🎯 Quick Demo
+
+Run the demo script to see all available utilities:
+```bash
+python demo.py
+```
+
+Or run the demo with:
+```bash
+./demo.py  # if you made it executable
+```
+
 ## 📖 Usage
 
 ### PDF Utilities

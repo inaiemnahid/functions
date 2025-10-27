@@ -6,7 +6,8 @@ Demo script to showcase all utility functions
 import sys
 import os
 
-# Add parent directory to path for imports
+# Add parent directory to path so demo can be run without package installation
+# This is intentional for demo/example scripts
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from utils.commands import get_common_commands, get_system_info
@@ -40,7 +41,7 @@ def main():
             "Split PDF into pages",
             "Convert PDF to images"
         ],
-        "🖼️  Image Utilities": [
+        "🖼️ Image Utilities": [
             "Resize images",
             "Convert image formats",
             "Update image resolution",

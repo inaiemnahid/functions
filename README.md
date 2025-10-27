@@ -31,6 +31,35 @@ A comprehensive collection of helpful utility functions for common tasks includi
 - **System Info**: Get detailed system information
 - **Print Commands**: Display commands by category
 
+### 🟣 Text Utilities
+- **Count Words/Characters**: Count words and characters in text
+- **Case Conversion**: Convert to snake_case, camelCase, kebab-case, etc.
+- **Extract Emails/URLs**: Extract email addresses and URLs from text
+- **Truncate Text**: Truncate long text with ellipsis
+- **Remove HTML Tags**: Strip HTML tags from text
+- **Text Manipulation**: Reverse, replace multiple, remove extra spaces
+
+### 🟠 Network Utilities
+- **Check Connection**: Test internet connectivity
+- **Get IP Address**: Get local machine IP address
+- **URL Validation**: Validate and parse URLs
+- **Build URLs**: Construct URLs with query parameters
+- **Domain Extraction**: Extract domain from URLs
+- **Port Check**: Check if a port is open
+
+### 🔷 Data Utilities
+- **JSON Operations**: Read, write, and pretty print JSON
+- **CSV Operations**: Read and write CSV files
+- **Format Conversion**: Convert between JSON and CSV
+- **Dictionary Operations**: Flatten, merge, and filter dictionaries
+
+### 🕐 DateTime Utilities
+- **Current Date/Time**: Get current timestamps in various formats
+- **Date Parsing**: Parse and format dates
+- **Date Math**: Add days/hours, calculate age, days between dates
+- **Date Info**: Check if weekend, get day/month names
+- **Time Ago**: Human-readable time differences
+
 ## 🚀 Installation
 
 1. Clone this repository:
@@ -143,12 +172,91 @@ info = get_system_info()
 print(f"OS: {info['system']} {info['release']}")
 ```
 
+### Text Utilities
+
+```python
+from utils.text import count_words, to_snake_case, extract_emails, truncate_text
+
+# Count words in text
+word_count = count_words("Hello world, this is a test")
+
+# Convert to snake_case
+snake = to_snake_case("Hello World Example")  # 'hello_world_example'
+
+# Extract emails from text
+emails = extract_emails("Contact: info@example.com or support@test.org")
+
+# Truncate long text
+short = truncate_text("This is a very long text", 10)  # 'This is...'
+```
+
+### Network Utilities
+
+```python
+from utils.network import check_internet_connection, parse_url, build_url
+
+# Check internet connection
+is_online = check_internet_connection()
+
+# Parse URL
+components = parse_url("https://example.com:8080/path?key=value")
+
+# Build URL with parameters
+url = build_url("https://api.example.com", {"q": "search", "page": "1"})
+```
+
+### Data Utilities
+
+```python
+from utils.data import read_json, write_csv, flatten_dict, merge_dicts
+
+# Read and write JSON
+data = read_json('data.json')
+write_json(data, 'output.json')
+
+# CSV operations
+csv_data = [{'name': 'John', 'age': 30}, {'name': 'Jane', 'age': 25}]
+write_csv(csv_data, 'output.csv')
+
+# Flatten nested dictionary
+flat = flatten_dict({'user': {'name': 'John', 'city': 'NYC'}})
+
+# Merge dictionaries
+merged = merge_dicts({'a': 1}, {'b': 2}, {'c': 3})
+```
+
+### DateTime Utilities
+
+```python
+from utils.datetime import get_current_date, add_days, calculate_age, time_ago
+
+# Get current date
+today = get_current_date()  # '2025-10-27'
+
+# Add days to date
+future = add_days(7)  # 7 days from now
+
+# Calculate age
+from utils.datetime import parse_date
+birth = parse_date('1990-01-01')
+age = calculate_age(birth)
+
+# Human-readable time difference
+past = add_days(-2)
+ago = time_ago(past)  # '2 days ago'
+```
+
 ## 🔍 Examples
 
 Check out the `examples/` directory for detailed usage examples:
 - `examples/pdf_examples.py` - PDF utility examples
 - `examples/image_examples.py` - Image utility examples
 - `examples/file_examples.py` - File utility examples
+- `examples/command_examples.py` - Command utility examples
+- `examples/text_examples.py` - Text utility examples
+- `examples/network_examples.py` - Network utility examples
+- `examples/data_examples.py` - Data utility examples
+- `examples/datetime_examples.py` - DateTime utility examples
 - `examples/command_examples.py` - Command utility examples
 
 Run examples:

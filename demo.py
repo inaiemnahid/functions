@@ -61,6 +61,35 @@ def main():
             "Execute shell commands",
             "Get system information",
             "Print commands by category"
+        ],
+        "📝 Text Utilities": [
+            "Count words and characters",
+            "Case conversion (snake, camel, kebab)",
+            "Extract emails and URLs",
+            "Truncate text",
+            "Remove HTML tags"
+        ],
+        "🌐 Network Utilities": [
+            "Check internet connection",
+            "Get IP address",
+            "Validate and parse URLs",
+            "Build URLs with parameters",
+            "Check port availability"
+        ],
+        "💾 Data Utilities": [
+            "Read/write JSON",
+            "Read/write CSV",
+            "Convert JSON ↔ CSV",
+            "Flatten dictionaries",
+            "Merge and filter dictionaries"
+        ],
+        "🕐 DateTime Utilities": [
+            "Get current date/time",
+            "Parse and format dates",
+            "Add/subtract days",
+            "Calculate age",
+            "Check if weekend",
+            "Human-readable time ago"
         ]
     }
     
